@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background: lightgray;
+  display: block;
+  padding-top: 12px;
+  font-family: sans-serif;
+}
+
+.container {
+  /*width: 500px;*/
+  margin: 10px auto;
+}
+
+h1 {
+  color: rgb(69, 113, 236);;
+  text-align: center;
+}
+
+.check-group {
+  width: 300px;
+  margin: 10px auto;
+  position: relative;
+}
+input {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  z-index: 5;
+  cursor: pointer;
+  /*margin: 10px 0;*/
+}
+
+input + label {
+  position: relative;
+  left: 80px;
+  /*margin: 20px 10px;*/
+}
+
+input:checked + label::before {
+  background: #f35429;
+}
+
+.check {
+  position: absolute;
+  top: -1px;
+  left: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+.check img{
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+}
+
+input:checked ~ .check {
+  background-color: #f35429;
+  /*display: block;*/
+}
+
+input:checked ~ .check img {
+  /*background-color: #f35429;*/
+  display: block;
+}
+
+input:hover ~ .check {
+  background: #f35429;
+}
+
